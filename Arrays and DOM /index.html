@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<p id="display"></p>
+
+	<form>
+		
+		<input type="button" value="Submit" onclick="fruitOrder()"/>
+
+	</form>
+
+	<script type="text/javascript">
+		var fruits = ['banana', 'orange', 'mangoe'];
+		document.getElementById("display").innerHTML = fruits.join(' with ');
+		function fruitOrder(){
+			
+			fruits.push(prompt('Add New Fruit').toLowerCase());
+			fruits.sort();
+			document.getElementById("display").innerHTML = fruits.join(' with ');
+		}
+	</script>
+
+</body>
+</html>
