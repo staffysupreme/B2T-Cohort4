@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title></title>
+	</head>
+	<body>
+		<hl id="display"></hl>
+
+		<script>
+		 
+			
+			function fizzBuzz(bun, TBone){
+				while (bun <= TBone){
+					if (bun%5 == 0 && bun%3 == 0) {
+							document.getElementById('display').innerHTML += "FizzBuzz" + "<br>"
+					}
+					else if (bun%5 == 0) {
+							document.getElementById('display').innerHTML += "Buzz" + "<br>"
+					}
+					else if (bun%3 == 0){
+							document.getElementById('display').innerHTML += "Fizz" + "<br>"
+					}	
+					else {
+							document.getElementById('display').innerHTML += bun + "<br>"
+					}
+					bun++;					
+				}
+			}
+			fizzBuzz(1,100);
+		    
+		</script>
+	</body>
+</html>
