@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Toggling event listeners</title>
+</head>
+	<link rel="stylesheet" href="style.css">
+<body>
+
+	<div id="BOX">
+		<input id="myButton1" type="button" value="ON">
+		<h1 id="display"></h1>
+	</div>
+
+	
+	<script>
+	function change(){
+
+    		var button = document.getElementById("myButton1");
+
+    		if (button.value=="ON"){
+
+    				button.value="OFF"; 
+			}
+			else{
+					button.value ="ON";
+			}
+		}
+				
+
+	function ColorCode(){
+
+			var color = document.getElementById("BOX");
+
+			if (color.style.backgroundColor=="green"){
+
+					color.style.backgroundColor="red";
+
+			}
+			else{
+					color.style.backgroundColor ="green";
+			}
+		}
+			document.getElementById("myButton1").addEventListener("click", change);
+
+			document.getElementById("BOX").addEventListener("mouseenter", ColorCode);
+
+			document.getElementById("BOX").addEventListener("mouseleave", ColorCode);
+	</script>
+
+</body>
+</html>
